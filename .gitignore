@@ -1,0 +1,9 @@
+# Cache files
+*.pyc
+.DS_Store
+npm-debug.log
+
+# Folders
+.tmp/
+.sass-cache/
+node_modules/

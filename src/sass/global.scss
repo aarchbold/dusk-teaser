@@ -1,0 +1,16 @@
+// general global styles
+body {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
