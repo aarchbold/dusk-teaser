@@ -1,0 +1,50 @@
+// home styles
+
+// Hero
+
+.main-hero {
+    width: 100%;
+    height: 700px;
+}
+
+.main-logo {
+    position: relative;
+}
+
+.main-logo__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.main-logo__tagline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 62px;
+    font-size: 19px;
+}
+
+.main-hero__cta {
+    padding-top: 70px;
+}
+
+.main-hero__cta-tagline {
+    padding-top: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+// FAQ
+
+.home-faq__question {
+    margin-bottom: 40px;
+    .-question {
+        margin-bottom: 10px;
+        color: white;
+        line-height: 1.4;
+    }
+    .-answer {
+        color: #5c6369;
+        line-height: 1.4;
+    }
+}

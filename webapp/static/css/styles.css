@@ -4,6 +4,7 @@
    License: none (public domain)
    This is a Sass partial
 */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,10 +55,12 @@ table {
   border-spacing: 0;
 }
 
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 body {
   background-color: black;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: Roboto,sans-serif;
 }
 
 a {
@@ -66,4 +69,58 @@ a {
 }
 a:hover {
   text-decoration: none;
+}
+
+.main-hero {
+  width: 100%;
+  height: 700px;
+}
+
+.main-logo {
+  position: relative;
+}
+
+.main-logo__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-logo__tagline {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 62px;
+  font-size: 19px;
+}
+
+.main-hero__cta {
+  padding-top: 70px;
+}
+
+.main-hero__cta-tagline {
+  padding-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.home-faq__question {
+  margin-bottom: 40px;
+}
+.home-faq__question .-question {
+  margin-bottom: 10px;
+  color: white;
+  line-height: 1.4;
+}
+.home-faq__question .-answer {
+  color: #5c6369;
+  line-height: 1.4;
+}
+
+.section-dusk {
+  width: auto;
+  max-width: 1200px;
+  padding: 0 100px;
+  margin: 0 auto;
 }
