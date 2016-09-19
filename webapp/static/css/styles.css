@@ -85,6 +85,24 @@ table {
   }
 }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+.btn-default {
+  transition: all 0.125s;
+  padding: 15px 40px;
+  background-color: #212a2e;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  border-radius: 20px;
+}
+.btn-default:hover {
+  background-color: #4cc1fc;
+  color: #5c6369;
+}
+.btn-default.-no-hover:hover {
+  background-color: #212a2e;
+  color: white;
+}
+
 body {
   background-color: black;
   color: white;
@@ -152,6 +170,11 @@ a:hover {
   max-width: 1200px;
   padding: 0 100px;
   margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .main-footer {
