@@ -55,6 +55,20 @@ table {
   border-spacing: 0;
 }
 
+@keyframes pulse-link {
+  0% {
+    color: white;
+  }
+  25% {
+    color: #4cc1fc;
+  }
+  75% {
+    color: white;
+  }
+  100% {
+    color: #4cc1fc;
+  }
+}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 body {
   background-color: black;
@@ -121,4 +135,23 @@ a:hover {
   max-width: 1200px;
   padding: 0 100px;
   margin: 0 auto;
+}
+
+.main-footer {
+  text-align: center;
+  font-size: 15px;
+  padding: 50px 0;
+}
+.main-footer a {
+  color: white;
+  padding: 0 20px;
+  text-decoration: none;
+}
+.main-footer a:hover {
+  animation: pulse-link 0.8s;
+  color: #4cc1fc;
+}
+.main-footer .main-footer__legal {
+  color: #5c6369;
+  margin-top: 30px;
 }
