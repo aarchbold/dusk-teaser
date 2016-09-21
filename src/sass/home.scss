@@ -6,6 +6,9 @@
     position: relative;
     width: 100%;
     height: 700px;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .main-logo {
@@ -29,7 +32,8 @@
 }
 
 .main-hero__cta {
-    padding-top: 70px;
+    position: relative;
+    padding-top: 52px;
     z-index: 10;
 }
 
@@ -40,15 +44,40 @@
     z-index: 10;
 }
 
+.main-hero__scene {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-width: 1440px;
+}
+
+.main-hero__sky-trees {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: url(../images/backgrounds/bg-trees.png) 50% 0;
+}
+
 .main-hero__sky-water {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    background-image: url(../images/backgrounds/bg-sky-water.png);
-    background-size: cover;
+    z-index: 4;
+    background: url(../images/backgrounds/bg-mountains-water.png) 50% 0;
 }
+
+.main-hero__sky-stars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 404px;
+    z-index: 3;
+    background: url(../images/backgrounds/bg-sky.png) 50% 0;
+} 
 
 // FAQ
 

@@ -1,10 +1,12 @@
 // layout styles
 
 .section-dusk {
+    position: relative;
     width: auto;
     max-width: 1200px;
     padding: 0 100px;
     margin: 0 auto;
+    z-index: 10;
 }
 .section-heading {
     text-align: center;
