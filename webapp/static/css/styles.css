@@ -84,6 +84,26 @@ table {
     color: #4cc1fc;
   }
 }
+@-webkit-keyframes shootingStar {
+  0% {
+    -webkit-transform: translate(-2000px, 1000px);
+    transform: translate(-2000px, 1000px);
+  }
+  100% {
+    -webkit-transform: translate(3000px, -1000px);
+    transform: translate(3000px, -1000px);
+  }
+}
+@keyframes shootingStar {
+  0% {
+    -webkit-transform: translate(-2000px, 1000px);
+    transform: translate(-2000px, 1000px);
+  }
+  100% {
+    -webkit-transform: translate(3000px, -1000px);
+    transform: translate(3000px, -1000px);
+  }
+}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 .btn-default {
   transition: all 0.125s;
@@ -119,6 +139,42 @@ a:hover {
   text-decoration: none;
 }
 
+.comet1 {
+  position: absolute;
+  top: 50px;
+  width: 132px;
+  height: 70px;
+  background-image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/comet2.png);
+  background-repeat: no-repeat;
+  -webkit-animation: shootingStar linear 6s infinite;
+  animation: shootingStar linear 6s infinite;
+  z-index: 3;
+}
+
+.comet2 {
+  position: absolute;
+  top: 360px;
+  width: 230px;
+  height: 100px;
+  background-image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/comet1.png);
+  background-repeat: no-repeat;
+  -webkit-animation: shootingStar linear 7s infinite;
+  animation: shootingStar linear 7s infinite;
+  z-index: 3;
+}
+
+.comet3 {
+  position: absolute;
+  top: 170px;
+  width: 230px;
+  height: 100px;
+  background-image: url(http://dcc0mwn9npc2l.cloudfront.net/assets/img/comet1.png);
+  background-repeat: no-repeat;
+  -webkit-animation: shootingStar linear 8s infinite;
+  animation: shootingStar linear 8s infinite;
+  z-index: 3;
+}
+
 .main-hero {
   position: relative;
   width: 100%;
@@ -126,6 +182,7 @@ a:hover {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
+  min-height: 500px;
 }
 
 .main-logo {
@@ -137,6 +194,8 @@ a:hover {
   display: block;
   margin: 0 auto;
   z-index: 10;
+  width: 90%;
+  max-width: 451px;
 }
 
 .main-logo__tagline {
@@ -194,7 +253,7 @@ a:hover {
   top: 0;
   width: 100%;
   height: 404px;
-  z-index: 3;
+  z-index: 2;
   background: url(../images/backgrounds/bg-sky.png) 50% 0;
 }
 
@@ -215,9 +274,10 @@ a:hover {
   position: relative;
   width: auto;
   max-width: 1200px;
-  padding: 0 100px;
+  padding: 0 100px 140px;
   margin: 0 auto;
   z-index: 10;
+  min-height: 800px;
 }
 
 .section-heading {
@@ -237,6 +297,8 @@ a:hover {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background-color: black;
+  min-height: auto;
+  z-index: 10;
 }
 .main-footer a {
   color: white;

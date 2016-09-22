@@ -9,6 +9,8 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: black;
+    min-height: auto;
+    z-index: 10;
     a {
         color: white;
         padding: 0 20px;
