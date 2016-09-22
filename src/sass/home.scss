@@ -56,6 +56,10 @@
     z-index: 10;
     width: 90%;
     max-width: 451px;
+    &.-appstore {
+        width: auto;
+        max-width: auto;
+    }
 }
 
 .main-logo__tagline {

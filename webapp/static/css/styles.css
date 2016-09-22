@@ -197,6 +197,10 @@ a:hover {
   width: 90%;
   max-width: 451px;
 }
+.main-logo__img.-appstore {
+  width: auto;
+  max-width: auto;
+}
 
 .main-logo__tagline {
   position: absolute;
