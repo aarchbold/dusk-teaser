@@ -33,12 +33,13 @@ $.fn.setSectionHeight = function(){
     hero = $('.main-hero', context),
     sections = $('.section-dusk', context),
     windowHeight = $(window).height(),
-    footerHeight = $('.main-footer', context).height();
+    footerHeight = $('.main-footer', context).height(),
+    heroOffset = 200;
 
   function setHeroHeight() {
-    hero.height(windowHeight - footerHeight);
+    hero.height(windowHeight + heroOffset);
     sections.each(function(i,e) {
-      $(e).height(windowHeight - footerHeight)
+      $(e).css('min-height',windowHeight - footerHeight);
     });
   }
 
@@ -66,10 +67,31 @@ $.fn.scrolltoSection = function(){
   })
 }
 
+function showFooter() {
+  var lastScrollTop = 0
+    footer = $('.main-footer');
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    console.log(st);
+    if (st > lastScrollTop){
+    // downscroll code
+      footer.addClass('-show-footer');
+    } else {
+    // upscroll code
+    }
+    if (st < 50) {
+      footer.removeClass('-show-footer');
+    }
+    lastScrollTop = st;
+  });
+}
+
 
 $(function(){
   $('[data-scroll-speed]').moveIt();
   $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
+  // show footer when scrolling down
+  showFooter();
 });
 

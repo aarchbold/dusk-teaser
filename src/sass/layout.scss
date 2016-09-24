@@ -1,5 +1,15 @@
 // layout styles
 
+.section-wrapper {
+    padding: 50px;
+    background-color: black;
+    position: relative;
+    z-index: 9;
+    @media (max-width: $breakpoint-phablet) {
+        padding: 50px 0px;
+    }
+}
+
 .section-dusk {
     position: relative;
     width: auto;
@@ -8,6 +18,9 @@
     margin: 0 auto;
     z-index: 10;
     min-height: 800px;
+    @media (max-width: $breakpoint-phablet) {
+        padding: 0 30px 140px;
+    }
 }
 .section-heading {
     text-align: center;
