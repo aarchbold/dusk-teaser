@@ -241,6 +241,42 @@ a:hover {
   line-height: 1.4;
 }
 
+.section-feedback__intro {
+  line-height: 1.4;
+  margin-bottom: 100px;
+}
+
+.section-feedback__ctas {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+.section-feedback__ctas img {
+  display: block;
+  margin: 40px auto;
+}
+
+.section-feedback__cta-slack {
+  transition: all 0.40s;
+  opacity: 0;
+  transform: translateX(-1000px);
+}
+.section-feedback__cta-slack.-show {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.section-feedback__cta-twitter {
+  transition: all 0.40s;
+  opacity: 0;
+  transform: translateX(1000px);
+}
+.section-feedback__cta-twitter.-show {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
 .section-wrapper {
   padding: 50px;
   background-color: black;
