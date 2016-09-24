@@ -56,9 +56,18 @@
     z-index: 10;
     width: 90%;
     max-width: 451px;
+    @media (max-width: $breakpoint-tablet) {
+        width: 325px;
+        margin-top: 35px;
+    }
     &.-appstore {
         width: auto;
         max-width: auto;
+        margin-top: 0;
+        @media (max-width: $breakpoint-tablet) {
+            width: 212px;
+            margin-top: 52px;
+        }
     }
 }
 
@@ -69,6 +78,12 @@
     bottom: 62px;
     font-size: 19px;
     z-index: 10;
+    width: 100%;
+    text-align: center;
+    @media (max-width: $breakpoint-tablet) {
+        bottom: 30px;
+        font-size: 17px;
+    }
 }
 
 .main-hero__cta {
@@ -99,6 +114,9 @@
     height: 200%;
     z-index: 5;
     background: url(../images/backgrounds/bg-trees.png) 50% 0;
+    @media (max-width: $breakpoint-tablet) {
+         background-position: 50% -140px;
+    }
 }
 
 .main-hero__sky-water {
@@ -149,6 +167,9 @@
     img {
         display: block;
         margin: 40px auto;
+        @media (max-width: $breakpoint-tablet) {
+            margin: 20px auto;
+        }
     }
 }
 
@@ -160,6 +181,9 @@
         opacity: 1;
         transform: translateX(0px);
     }
+    @media (max-width: $breakpoint-tablet) {
+        width: 80%;
+    }
 }
 .section-feedback__cta-twitter {
     transition: all 0.40s;
@@ -168,5 +192,8 @@
     &.-show {
         opacity: 1;
         transform: translateX(0px);
+    }
+    @media (max-width: $breakpoint-tablet) {
+        width: 80%;
     }
 }

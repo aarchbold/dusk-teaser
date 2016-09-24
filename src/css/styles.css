@@ -95,12 +95,22 @@ table {
   background-color: #212a2e;
   color: white;
 }
+@media (max-width: 640px) {
+  .btn-default {
+    font-size: 16px;
+  }
+}
 
 body {
   color: white;
   font-size: 20px;
   font-family: Roboto,sans-serif;
   background: black url(../images/backgrounds/bg-body.jpg) 50% 0;
+}
+@media (max-width: 640px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 a {
@@ -166,9 +176,22 @@ a:hover {
   width: 90%;
   max-width: 451px;
 }
+@media (max-width: 778px) {
+  .main-logo__img {
+    width: 325px;
+    margin-top: 35px;
+  }
+}
 .main-logo__img.-appstore {
   width: auto;
   max-width: auto;
+  margin-top: 0;
+}
+@media (max-width: 778px) {
+  .main-logo__img.-appstore {
+    width: 212px;
+    margin-top: 52px;
+  }
 }
 
 .main-logo__tagline {
@@ -178,6 +201,14 @@ a:hover {
   bottom: 62px;
   font-size: 19px;
   z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 778px) {
+  .main-logo__tagline {
+    bottom: 30px;
+    font-size: 17px;
+  }
 }
 
 .main-hero__cta {
@@ -208,6 +239,11 @@ a:hover {
   height: 200%;
   z-index: 5;
   background: url(../images/backgrounds/bg-trees.png) 50% 0;
+}
+@media (max-width: 778px) {
+  .main-hero__sky-trees {
+    background-position: 50% -140px;
+  }
 }
 
 .main-hero__sky-water {
@@ -256,6 +292,11 @@ a:hover {
   display: block;
   margin: 40px auto;
 }
+@media (max-width: 778px) {
+  .section-feedback__ctas img {
+    margin: 20px auto;
+  }
+}
 
 .section-feedback__cta-slack {
   transition: all 0.40s;
@@ -266,6 +307,11 @@ a:hover {
   opacity: 1;
   transform: translateX(0px);
 }
+@media (max-width: 778px) {
+  .section-feedback__cta-slack {
+    width: 80%;
+  }
+}
 
 .section-feedback__cta-twitter {
   transition: all 0.40s;
@@ -275,6 +321,11 @@ a:hover {
 .section-feedback__cta-twitter.-show {
   opacity: 1;
   transform: translateX(0px);
+}
+@media (max-width: 778px) {
+  .section-feedback__cta-twitter {
+    width: 80%;
+  }
 }
 
 .section-wrapper {
@@ -296,7 +347,7 @@ a:hover {
   padding: 0 100px 140px;
   margin: 0 auto;
   z-index: 10;
-  min-height: 800px;
+  min-height: 600px;
 }
 @media (max-width: 640px) {
   .section-dusk {

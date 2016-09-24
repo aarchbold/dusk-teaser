@@ -38,9 +38,9 @@ $.fn.setSectionHeight = function(){
 
   function setHeroHeight() {
     hero.height(windowHeight + heroOffset);
-    sections.each(function(i,e) {
-      $(e).css('min-height',windowHeight - footerHeight);
-    });
+    // sections.each(function(i,e) {
+    //   $(e).css('min-height',windowHeight - footerHeight);
+    // });
   }
 
   setHeroHeight();
@@ -84,7 +84,7 @@ function scrollyStuff() {
     if (st < 50) {
       footer.removeClass('-show-footer');
     }
-    if (st >= feedbackSection.offset().top - 200) {
+    if (st >= feedbackSection.offset().top - 400) {
       btnSlack.addClass('-show');
       btnTwitter.addClass('-show');
     } else {
