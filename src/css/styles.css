@@ -106,6 +106,7 @@ body {
   font-size: 20px;
   font-family: Roboto,sans-serif;
   background: black url(../images/backgrounds/bg-body.jpg) 50% 0;
+  overflow-x: hidden;
 }
 @media (max-width: 640px) {
   body {
@@ -300,8 +301,7 @@ a:hover {
 
 .section-feedback__cta-slack {
   transition: all 0.40s;
-  opacity: 0;
-  transform: translateX(-1000px);
+  opacity: 1;
 }
 .section-feedback__cta-slack.-show {
   opacity: 1;
@@ -315,8 +315,7 @@ a:hover {
 
 .section-feedback__cta-twitter {
   transition: all 0.40s;
-  opacity: 0;
-  transform: translateX(1000px);
+  opacity: 1;
 }
 .section-feedback__cta-twitter.-show {
   opacity: 1;
@@ -361,15 +360,15 @@ a:hover {
 }
 
 .main-footer {
-  transition: all 0.250s;
+  position: absolute;
+  transition: transform 0.450s;
   text-align: center;
   font-size: 15px;
   padding: 30px 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(120px);
+  top: 100%;
+  transform: translateX(-50%) translateY(0px);
   background-color: black;
   min-height: auto;
   z-index: 10;
@@ -399,8 +398,8 @@ a:hover {
     padding-left: 0px;
   }
 }
-.main-footer.-show-footer {
-  transform: translateX(-50%) translateY(0px);
+.main-footer.-hide-footer {
+  transform: translateX(-50%) translateY(120px);
 }
 .main-footer a {
   color: white;

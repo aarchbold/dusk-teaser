@@ -73,25 +73,47 @@ function scrollyStuff() {
     footer = $('.main-footer'),
     btnSlack = $('.section-feedback__cta-slack'),
     btnTwitter = $('.section-feedback__cta-twitter');
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop){
-    // downscroll code
-      footer.addClass('-show-footer');
-    } else {
-    // upscroll code
-    }
-    if (st < 50) {
-      footer.removeClass('-show-footer');
-    }
-    if (st >= feedbackSection.offset().top - 400) {
-      btnSlack.addClass('-show');
-      btnTwitter.addClass('-show');
-    } else {
-      btnSlack.removeClass('-show');
-      btnTwitter.removeClass('-show');    }
-    lastScrollTop = st;
+  // $(window).scroll(function(event){
+  //   var st = $(this).scrollTop();
+  //   if (st > lastScrollTop){
+  //   // downscroll code
+  //     footer.addClass('-show-footer');
+  //   } else {
+  //   // upscroll code
+  //   }
+  //   if (st < 50) {
+  //     footer.removeClass('-show-footer');
+  //   }
+  //   if (st >= feedbackSection.offset().top - 400) {
+  //     btnSlack.addClass('-show');
+  //     btnTwitter.addClass('-show');
+  //   } else {
+  //     btnSlack.removeClass('-show');
+  //     btnTwitter.removeClass('-show');    }
+  //   lastScrollTop = st;
+  // });
+
+  // set OG footer position
+  footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 120});
+
+  $(window).on('scrollstop', function(event) {
+    console.log('show footer');
+    console.log($(this).scrollTop());
+    console.log('window height + scroll top', $(window).height() + $(this).scrollTop());
+    // footer.removeClass('-hide-footer');
+    console.log('body height', $('body').height())
+    footer.css({'top':($(window).height() + $(this).scrollTop()) - 130});
+    footer.show();
   });
+  $(window).on('scrollstart', function(event) {
+    console.log('hide footer');
+    // footer.addClass('-hide-footer');
+    // footer.css({'opacity': 0})
+    if ($(window).height() + $(this).scrollTop() < $('body').height()) {
+      footer.hide();
+    }
+  });
+
 }
 
 
@@ -101,5 +123,7 @@ $(function(){
   $('.main-footer').scrolltoSection();
   // show footer when scrolling down
   scrollyStuff();
+
+
 });
 

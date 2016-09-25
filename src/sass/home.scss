@@ -175,8 +175,8 @@
 
 .section-feedback__cta-slack {
     transition: all 0.40s;
-    opacity: 0;
-    transform: translateX(-1000px);
+    opacity: 1;
+    //transform: translateX(-1000px);
     &.-show {
         opacity: 1;
         transform: translateX(0px);
@@ -187,8 +187,8 @@
 }
 .section-feedback__cta-twitter {
     transition: all 0.40s;
-    opacity: 0;
-    transform: translateX(1000px);
+    opacity: 1;
+    // transform: translateX(1000px);
     &.-show {
         opacity: 1;
         transform: translateX(0px);
