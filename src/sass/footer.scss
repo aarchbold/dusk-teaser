@@ -1,18 +1,22 @@
 // Footer styles
 .main-footer {
-    position: absolute;
+    position: fixed;
     transition: transform 0.450s;
     text-align: center;
     font-size: 15px;
     padding: 30px 0;
     width: 100%;
     left: 50%;
-    top: 100%;
-    // transform: translateX(-50%) translateY(120px);
-    transform: translateX(-50%) translateY(0px);
+    bottom: 0;
+    transform: translateX(-50%) translateY(120px);
+    // transform: translateX(-50%) translateY(0px);
     background-color: black;
     min-height: auto;
     z-index: 10;
+    .touch & {
+        transform: translateX(-50%) translateY(0px);
+        position: absolute;
+    }
     .main-footer__container {
         position: relative;
         padding-left: 160px;
@@ -35,7 +39,7 @@
         }
     }
     &.-show-footer {
-        // transform: translateX(-50%) translateY(0px);
+        transform: translateX(-50%) translateY(0px);
     }
     &.-hide-footer {
         transform: translateX(-50%) translateY(120px);

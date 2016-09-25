@@ -105,6 +105,9 @@
     height: 100%;
     top: 0;
     max-width: 1920px;
+    @media (max-width: $breakpoint-tablet) {
+        position: absolute;
+    }
 }
 
 .main-hero__sky-trees {
@@ -175,9 +178,9 @@
 
 .section-feedback__cta-slack {
     transition: all 0.40s;
-    opacity: 1;
-    //transform: translateX(-1000px);
-    &.-show {
+    opacity: 0;
+    transform: translateX(-1000px);
+    &.-show, .touch & {
         opacity: 1;
         transform: translateX(0px);
     }
@@ -187,9 +190,9 @@
 }
 .section-feedback__cta-twitter {
     transition: all 0.40s;
-    opacity: 1;
-    // transform: translateX(1000px);
-    &.-show {
+    opacity: 0; 
+    transform: translateX(1000px);
+    &.-show, .touch & {
         opacity: 1;
         transform: translateX(0px);
     }
