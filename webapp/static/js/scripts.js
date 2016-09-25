@@ -99,7 +99,7 @@ function scrollyStuff() {
       lastScrollTop = st;
     });
   } else {
-    footer.css({'position':'absolute','opacity': 1,'bottom': 'auto','top':($(window).height() + $(this).scrollTop()) - 120});
+    footer.css({'position':'absolute','opacity': 0,'bottom': 'auto','top':($(window).height() + $(this).scrollTop()) - 120});
 
     $(window).on('scrollstop', function(event) {
       console.log('show footer');
@@ -107,7 +107,7 @@ function scrollyStuff() {
       console.log('window height + scroll top', $(window).height() + $(this).scrollTop());
       // footer.removeClass('-hide-footer');
       console.log('body height', $('body').height())
-      footer.css({'top':($(window).height() + $(this).scrollTop()) - 130});
+      footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 130});
       footer.show();
     });
     $(window).on('scrollstart', function(event) {
@@ -124,8 +124,14 @@ function scrollyStuff() {
 
 
 $(function(){
+  // remove prallax on phones for performance gains
   if ($('html').hasClass('no-touch')) {
     $('[data-scroll-speed]').moveIt();
+  } else {
+    // attempt to hide the location bar (site looks way better without it)
+    setTimeout(function() {
+      window.scrollTo(0, 1);
+    }, 100)
   };
   $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
