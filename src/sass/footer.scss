@@ -11,7 +11,7 @@
     transform: translateX(-50%) translateY(120px);
     // transform: translateX(-50%) translateY(0px);
     background-color: black;
-    min-height: auto;
+    min-height: 100px;
     z-index: 10;
     .touch & {
         transform: translateX(-50%) translateY(0px);
@@ -22,6 +22,7 @@
         padding-left: 160px;
         width: 400px;
         margin: 0 auto;
+        background-color: black;
         .btn-appstore {
             position: absolute;
             top: 14px;
