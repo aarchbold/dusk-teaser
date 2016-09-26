@@ -99,19 +99,34 @@ function scrollyStuff() {
       lastScrollTop = st;
     });
   } else {
-    footer.css({'position':'absolute','opacity': 0,'bottom': 'auto','top':($(window).height() + $(this).scrollTop()) - 120});
+    //footer.css({'position':'absolute','opacity': 1,'bottom': 'auto','top':($(window).height() + $(this).scrollTop()) - 120});
 
-    $(window).on('scrollstop', function(event) {
-      console.log('show footer');
-      console.log($(this).scrollTop());
-      console.log('window height + scroll top', $(window).height() + $(this).scrollTop());
-      // footer.removeClass('-hide-footer');
-      console.log('body height', $('body').height())
-      footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 130});
-      footer.show();
-    });
+    $(window).on('scrollstop', _.debounce(function(event) {
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop) {
+        // going down
+        if ($(this).scrollTop() > 200) {
+          if ($('html').hasClass('iphone')) {
+            footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 40});
+          } else {
+            footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 130});
+          }
+          footer.show();
+        }
+      } else {
+        // going up
+        if ($(this).scrollTop() > 200) {
+          if ($('html').hasClass('iphone')) {
+            footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 110});
+          } else {
+            footer.css({'opacity': 1,'top':($(window).height() + $(this).scrollTop()) - 130});
+          }
+          footer.show();
+        }
+      }       
+      lastScrollTop = st;
+    }, 100));
     $(window).on('scrollstart', function(event) {
-      console.log('hide footer');
       // footer.addClass('-hide-footer');
       // footer.css({'opacity': 0})
       if ($(window).height() + $(this).scrollTop() < $('body').height()) {
@@ -124,6 +139,10 @@ function scrollyStuff() {
 
 
 $(function(){
+  // add Modernizr test for iphone
+  Modernizr.addTest('iphone', function () {
+    return !!navigator.userAgent.match(/iPhone/i);
+  });
   // remove prallax on phones for performance gains
   if ($('html').hasClass('no-touch')) {
     $('[data-scroll-speed]').moveIt();
