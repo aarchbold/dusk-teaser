@@ -10,6 +10,9 @@
     background-repeat: no-repeat;
     animation: shootingStar linear 6s infinite;
     z-index: 3;
+    @media (max-width: $breakpoint-tablet) {
+         top: 0px;
+    }
 }
 .comet2 {
     position: absolute;
@@ -20,6 +23,9 @@
     background-repeat: no-repeat;
     animation: shootingStar linear 7s infinite;
     z-index: 3;
+    @media (max-width: $breakpoint-tablet) {
+         top: 140px;
+    }
 }
 .comet3 {
     position: absolute;
@@ -100,6 +106,7 @@
     font-size: 15px;
     text-align: center;
     z-index: 10;
+    color: white;
 }
 
 .main-hero__scene {
