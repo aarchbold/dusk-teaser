@@ -33,11 +33,16 @@ $.fn.setSectionHeight = function(){
     hero = $('.main-hero', context),
     sections = $('.section-dusk', context),
     windowHeight = $(window).height(),
+    windowHeightMax = 1080,
     footerHeight = $('.main-footer', context).height(),
     heroOffset = 200;
 
   function setHeroHeight() {
-    hero.height(windowHeight + heroOffset);
+    if (windowHeight >= windowHeightMax) {
+      hero.height(windowHeightMax);
+    } else {
+      hero.height(windowHeight + heroOffset);
+    }
     // sections.each(function(i,e) {
     //   $(e).css('min-height',windowHeight - footerHeight);
     // });
@@ -90,12 +95,14 @@ function scrollyStuff() {
       if (st < 50) {
         footer.removeClass('-show-footer');
       }
-      if (st >= feedbackSection.offset().top - 400) {
-        btnSlack.addClass('-show');
-        btnTwitter.addClass('-show');
-      } else {
-        btnSlack.removeClass('-show');
-        btnTwitter.removeClass('-show');    }
+      // not really working on large screens
+      // if (st >= feedbackSection.offset().top - 1000) {
+      //   btnSlack.addClass('-show');
+      //   btnTwitter.addClass('-show');
+      // } else {
+      //   btnSlack.removeClass('-show');
+      //   btnTwitter.removeClass('-show');
+      // }
       lastScrollTop = st;
     });
   } else {

@@ -90,6 +90,9 @@
     position: relative;
     padding-top: 52px;
     z-index: 10;
+    @media (max-width: $breakpoint-tablet) {
+         padding-top: 0;
+    }
 }
 
 .main-hero__cta-tagline {
@@ -142,24 +145,12 @@
 
 // FAQ
 
-.home-faq__question {
-    margin-bottom: 40px;
-    .-question {
-        margin-bottom: 10px;
-        color: white;
-        line-height: 1.4;
-    }
-    .-answer {
-        color: #5c6369;
-        line-height: 1.4;
-    }
-}
-
 // Feedback
 
 .section-feedback__intro {
     line-height: 1.4;
     margin-bottom: 100px;
+    color: white;
 }
 
 .section-feedback__ctas {
@@ -178,24 +169,24 @@
 
 .section-feedback__cta-slack {
     transition: all 0.40s;
-    opacity: 0;
-    transform: translateX(-1000px);
-    &.-show, .touch & {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+    opacity: 1;
+    // transform: translateX(-1000px);
+    // &.-show, .touch & {
+    //     opacity: 1;
+    //     transform: translateX(0px);
+    // }
     @media (max-width: $breakpoint-tablet) {
         width: 80%;
     }
 }
 .section-feedback__cta-twitter {
     transition: all 0.40s;
-    opacity: 0; 
-    transform: translateX(1000px);
-    &.-show, .touch & {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+    opacity: 1; 
+    // transform: translateX(1000px);
+    // &.-show, .touch & {
+    //     opacity: 1;
+    //     transform: translateX(0px);
+    // }
     @media (max-width: $breakpoint-tablet) {
         width: 80%;
     }

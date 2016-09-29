@@ -114,14 +114,6 @@ body {
   }
 }
 
-a {
-  color: white;
-  text-decoration: underline;
-}
-a:hover {
-  text-decoration: none;
-}
-
 .comet1 {
   position: absolute;
   top: 50px;
@@ -217,6 +209,11 @@ a:hover {
   padding-top: 52px;
   z-index: 10;
 }
+@media (max-width: 778px) {
+  .main-hero__cta {
+    padding-top: 0;
+  }
+}
 
 .main-hero__cta-tagline {
   padding-top: 10px;
@@ -270,22 +267,10 @@ a:hover {
   background: url(../images/backgrounds/bg-sky.png) 50% 0 no-repeat;
 }
 
-.home-faq__question {
-  margin-bottom: 40px;
-}
-.home-faq__question .-question {
-  margin-bottom: 10px;
-  color: white;
-  line-height: 1.4;
-}
-.home-faq__question .-answer {
-  color: #5c6369;
-  line-height: 1.4;
-}
-
 .section-feedback__intro {
   line-height: 1.4;
   margin-bottom: 100px;
+  color: white;
 }
 
 .section-feedback__ctas {
@@ -306,12 +291,7 @@ a:hover {
 
 .section-feedback__cta-slack {
   transition: all 0.40s;
-  opacity: 0;
-  transform: translateX(-1000px);
-}
-.section-feedback__cta-slack.-show, .touch .section-feedback__cta-slack {
   opacity: 1;
-  transform: translateX(0px);
 }
 @media (max-width: 778px) {
   .section-feedback__cta-slack {
@@ -321,12 +301,7 @@ a:hover {
 
 .section-feedback__cta-twitter {
   transition: all 0.40s;
-  opacity: 0;
-  transform: translateX(1000px);
-}
-.section-feedback__cta-twitter.-show, .touch .section-feedback__cta-twitter {
   opacity: 1;
-  transform: translateX(0px);
 }
 @media (max-width: 778px) {
   .section-feedback__cta-twitter {
@@ -364,6 +339,37 @@ a:hover {
 .section-heading {
   text-align: center;
   margin-bottom: 100px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: white;
+  line-height: 1.4;
+}
+
+p {
+  color: #5c6369;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+p a {
+  color: #5c6369;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin-bottom: 40px;
+  color: #5c6369;
+  list-style: circle;
+  padding-left: 30px;
+  line-height: 1.4;
 }
 
 .main-footer {
@@ -425,7 +431,17 @@ a:hover {
   animation: pulse-link 0.8s;
   color: #4cc1fc;
 }
+@media (max-width: 490px) {
+  .main-footer a {
+    font-size: 13px;
+  }
+}
 .main-footer .main-footer__legal {
   color: #5c6369;
   margin-top: 22px;
+}
+@media (max-width: 490px) {
+  .main-footer .main-footer__legal {
+    font-size: 13px;
+  }
 }

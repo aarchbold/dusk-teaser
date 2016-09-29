@@ -53,9 +53,15 @@
            animation: pulse-link 0.8s; 
            color: #4cc1fc
         }
+        @media (max-width: $breakpoint-phone) {
+            font-size: 13px;
+        }
     }
     .main-footer__legal {
         color: #5c6369;
         margin-top: 22px;
+        @media (max-width: $breakpoint-phone) {
+            font-size: 13px;
+        }
     }
 }
