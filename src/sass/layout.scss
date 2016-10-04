@@ -1,19 +1,15 @@
 // layout styles
 
 .section-wrapper {
-    padding: 50px;
-    background-color: black;
     position: relative;
     z-index: 9;
-    @media (max-width: $breakpoint-phablet) {
-        padding: 50px 0px;
-    }
+    background: #000000 url(../images/backgrounds/bg-section.jpg) 50% 0;
 }
 
 .section-dusk {
     position: relative;
     width: auto;
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 0 100px 140px;
     margin: 0 auto;
     z-index: 10;

@@ -4,25 +4,29 @@
     transition: transform 0.450s;
     text-align: center;
     font-size: 15px;
-    padding: 30px 0;
+    padding: 40px 0 20px 0;
     width: 100%;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%) translateY(120px);
     // transform: translateX(-50%) translateY(0px);
-    background-color: black;
+    background: linear-gradient(transparent, black 50%);
     min-height: 100px;
     z-index: 10;
     .touch & {
         transform: translateX(-50%) translateY(0px);
         position: absolute;
+        background-color: black;
+        padding: 30px 0;
     }
     .main-footer__container {
         position: relative;
         padding-left: 160px;
         width: 400px;
         margin: 0 auto;
-        background-color: black;
+        .touch & {
+            background-color: black;
+        }
         .btn-appstore {
             position: absolute;
             top: 14px;

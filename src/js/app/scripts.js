@@ -159,7 +159,7 @@ $(function(){
       window.scrollTo(0, 1);
     }, 100)
   };
-  $('#home-page').setSectionHeight();
+  // $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
   // show footer when scrolling down
   scrollyStuff();
