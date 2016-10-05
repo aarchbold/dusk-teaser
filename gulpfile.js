@@ -31,14 +31,6 @@ gulp.task('compress', function () {
     return gulp.src(config.jsDest + '/app.js')
         .pipe(uglify())
         .pipe(gulp.dest(config.jsDest));
-    // pump(
-    //     [
-    //         gulp.src('lib/*.js'),
-    //         uglify(),
-    //         gulp.dest('dist')
-    //     ],
-    //     cb
-    // );
 });
 
 gulp.task('sass', function() {
@@ -60,7 +52,7 @@ gulp.task('autoprefixer', function () {
         .pipe(gulp.dest(config.cssDest));
 });
 
-// Rerun the task when a file changes
+// Rerun the tasks when a file changes
  gulp.task('watch', function() {
      gulp.watch(config.sassPath + '/**/*.scss', ['sass']); 
     gulp.watch(config.cssPath + '/*.css', ['autoprefixer']);

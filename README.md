@@ -5,7 +5,7 @@ marketing site for dusk
 
 1. Clone this repo
 2. navigate to project directory with terminal
-3. run "npm install"
+3. run "npm install" to install gulp dependencies
 4. run "gulp" to build files
 5. run "gulp watch" to watch for changes in "src" directory
 
