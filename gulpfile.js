@@ -3,7 +3,7 @@ var gulp = require('gulp'), 
     notify = require("gulp-notify") ,
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-
+    uglify = require('gulp-uglify');
 
     config = {
         vendorsPath: './src/js/vendor',
@@ -13,6 +13,7 @@ var gulp = require('gulp'), 
         cssPath: './src/css',
         cssDest: './webapp/static/css'
     }
+
 
 gulp.task('vendors', function() {
     return gulp.src(config.vendorsPath + '/*.js')
@@ -24,6 +25,20 @@ gulp.task('js', function() {
     return gulp.src(config.jsPath + '/*.js')
         .pipe(concat('app.js'))
         .pipe(gulp.dest(config.jsDest));
+});
+
+gulp.task('compress', function () {
+    return gulp.src(config.jsDest + '/app.js')
+        .pipe(uglify())
+        .pipe(gulp.dest(config.jsDest));
+    // pump(
+    //     [
+    //         gulp.src('lib/*.js'),
+    //         uglify(),
+    //         gulp.dest('dist')
+    //     ],
+    //     cb
+    // );
 });
 
 gulp.task('sass', function() {
@@ -51,6 +66,7 @@ gulp.task('autoprefixer', function () {
     gulp.watch(config.cssPath + '/*.css', ['autoprefixer']);
     gulp.watch(config.vendorsPath + '/*.js', ['vendors']);
     gulp.watch(config.jsPath + '/*.js', ['js']);
+    gulp.watch(config.jsDest + '/app.js', ['compress']);
 });
 
-  gulp.task('default', ['sass', 'autoprefixer', 'vendors', 'js']);
+  gulp.task('default', ['sass', 'autoprefixer', 'vendors', 'js', 'compress']);
