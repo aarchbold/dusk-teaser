@@ -64,7 +64,7 @@ $.fn.scrolltoSection = function(){
     offset = 50;
 
   links.click(function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     var target = $("section[data-target='" + $(this).data('goto') +"']");
     setTimeout(function(){
       body.stop(true, true).animate({ scrollTop: target.offset().top - offset }, 600);
@@ -164,6 +164,14 @@ $(function(){
   // show footer when scrolling down
   scrollyStuff();
 
+  // sroll to sections if hash tag exists
+  if (window.location.hash === '#terms') {
+    $('a[data-goto="terms"]').click();
+  } else if (window.location.hash === '#faq') {
+    $('a[data-goto="faq"]').click();
+  } else if (window.location.hash === '#feedback') {
+    $('a[data-goto="feedback"]').click();
+  }
 
 });
 
