@@ -61,4 +61,4 @@ gulp.task('autoprefixer', function () {
     gulp.watch(config.jsDest + '/app.js', ['compress']);
 });
 
-  gulp.task('default', ['sass', 'autoprefixer', 'vendors', 'js', 'compress']);
+  gulp.task('default', ['sass', 'autoprefixer', 'vendors', 'js']);
